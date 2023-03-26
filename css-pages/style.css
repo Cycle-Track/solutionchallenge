@@ -1,0 +1,535 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    width:80%;
+    height: 80%;
+}
+body{
+    background-color: #252525;
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before , .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+/*.loader .asteroid .stone{
+    position: absolute;
+    width: 10px;
+    height: 140px;
+    background: linear-gradient(to top, #fff, transparent);
+    top: 100px;
+    left: 100px;
+    border-radius: 50px;
+    opacity: 0;
+    animation: stone 14s ease 0s infinite;
+  }
+  @keyframes stone{
+    from{
+        transform: translateY(-500%);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(500%);
+        opacity: .3;
+    }
+  }
+  .loader .asteroid .stone:nth-child(2){
+    top: 300px;
+    left: 400px;   
+    animation-delay: .7s;
+    animation-duration: 6s;
+  }
+  .loader .asteroid .stone:nth-child(3){
+    top: 500px;
+    left: 200px; 
+    animation-delay: .5s;
+    animation-duration: 3s;  
+  }
+  .loader .asteroid .stone:nth-child(4){
+    top: 100px;
+    right: 100px;   
+    left: inherit;
+    animation-delay: .2s;
+    animation-duration: 4s;
+  }
+  .loader .asteroid .stone:nth-child(5){
+    top: 300px;
+    right: 400px;   
+    left: inherit;  
+    animation-delay: .8s;
+    animation-duration: 7s;
+  }
+  .loader .asteroid .stone:nth-child(6){
+    top: 500px;
+    right: 200px;   
+    left: inherit;
+  }
+  .loader .asteroid .stone:nth-child(7){
+    top: 0;   
+    left: 45%;
+  }
+  .loader .asteroid .stone:nth-child(even){
+    background: linear-gradient(to top, #fdfdfd, transparent);
+    box-shadow: 0 4px 94px #384fde;
+  }*/
+  
+.bicycle-container{
+    position: absolute;
+    margin: auto;
+    top: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 400px;
+    height: 350px;
+    overflow: hidden;
+}
+.bicycle-container .wheel{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 10px 15px -12px rgba(0, 0, 0, 0.3);
+
+}
+.bicycle-container .wheel .tire{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: 10px solid #151515;
+    z-index: 2;
+}
+.bicycle-container .wheel .rim{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 114px ;
+    height: 114px;
+    border-radius: 50%;
+    border: 10px solid crimson;
+    z-index: 1;
+}
+.bicycle-container .wheel .spokes{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 78px ;
+    height: 78px;
+    border-radius: 50%;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid crimson;
+    z-index: 1;
+    background: rgba(200, 100, 100, 0.1);
+    animation: rt 2s infinite linear;
+}
+.bicycle-container .wheel .spokes:nth-of-type(3){
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid crimson;
+}
+.bicycle-container .wheel .hub{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 24px ;
+    height: 24px;
+    border-radius: 50%;
+    background: crimson;
+}
+.bicycle-container .back-wheel{
+    left: 0;
+}
+.bicycle-container .front-wheel{
+    right: 0;
+}
+.bicycle-container .gear{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: calc(120px + 39.6px);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #151515;
+    z-index: 4;
+    animation: rt 3s infinite linear;
+
+}
+.bicycle-container .gear .gear-red{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 24px ;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid crimson;
+}
+.bicycle-container .gear .padel-tube{
+    position: absolute;
+    margin: auto;
+    top: -30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 20px;
+}
+.bicycle-container .gear .padel{
+    position: absolute;
+    margin:auto;
+    top: -50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 5px;
+    background-color: crimson;
+    border-radius: 5px;
+    z-index: 3;
+}
+.bicycle-container .tube{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #151515;
+    z-index: 3;
+}
+.bicycle-container .chain-tube{
+    left: calc(120px / 2);
+    width: 120px;
+}
+.bicycle-container .seat-tube-back{
+    left: calc(120px / 2);
+    transform-origin: left;
+    transform: rotate(-60deg);
+    width: 120px;
+}
+.bicycle-container .seat-tube-front{
+    left: calc(120px / 2);
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 120px;
+}
+.bicycle-container .seat-tube-post {
+    left: calc((120px / 2) - 20px);
+    transform-origin: right;
+    transform: rotate(60deg);
+    background: crimson;
+    z-index: 1;
+    height: calc(5px - 1px);
+    width: 140px;
+  }
+.bicycle-container .top-tube{
+    left: 120px;
+    bottom: initial;
+    top: 44px;
+    width: 113px;
+}
+.bicycle-container .top-handlerbar-tube{
+    right: 112px;
+    bottom: initial;
+    top: 25px;
+    width: 20px;
+    background: crimson;
+}
+.bicycle-container .top-handlerbar-tube2{
+    right: 90px;
+    bottom: initial;
+    top: 25px;
+    width: 25px;
+    background: #151515;
+    border-radius: 0%;
+}
+.bicycle-container .down-tube{
+    left: calc(120px + 60px);
+    width: 100px;
+    transform-origin: left;
+    transform: rotate(-50deg);
+}
+.bicycle-container .head-tube{
+    right: calc(120px / 2);
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 120px;
+}
+.bicycle-container .head-tube-post{
+    right: calc(120px / 2);
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 140px;
+    background: crimson;
+    z-index: 1;
+    height: calc(5px - 1px);
+}
+.bicycle-container .saddle{
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    left: 85px;
+    width: 50px;
+    height: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 50%;
+    background: #151515;
+    z-index: 2;
+}
+.bicycle-container .handlebars{
+    position: absolute;
+    margin: auto;
+    top: 25px;
+    right: calc(100px / 2 + 25px);
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: 5px solid #151515;
+    border-right: 5px solid #151515;
+    border-bottom: 5px solid crimson;
+    z-index: 2;
+}
+.ground-container{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+}
+.ground-container .ground{
+    position: absolute;
+    margin: auto;
+    background: #fff;
+    z-index: -1;
+    animation:  mv infinite linear;
+}
+.ground-container .ground1{
+    bottom: 0;
+    right: -150px;
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    animation-duration: 3s;
+    z-index: 5;
+}
+.ground-container .ground1::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -60px;
+    left: 150px;
+    width: 40px;
+    height: 30px;
+    border-top-right-radius: 60%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 20%;
+    background: #151515;
+}
+.ground-container .ground2{
+    bottom: 70px;
+    right: -250px;
+    width: 100px;
+    height: 2px;
+    border-radius: 10px;
+    animation-duration: 4s;
+}
+.ground-container .ground2::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -30px;
+    left: 200px;
+    width: 20px;
+    height: 10px;
+    border-top-right-radius: 60%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 20%;
+    background: #151515;
+}
+.ground-container .ground3{
+    top: 50px;
+    right: -300px;
+    width: 100px;
+    height: 2px;
+    border-radius: 10px;
+    animation-duration: 5s;
+}
+.ground-container .ground3::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 10px;
+    left: -100px;
+    width: 10px;
+    height: 5px;
+    border-top-right-radius: 60%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 20%;
+    background: #151515;
+}
+@keyframes rt{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes mv{
+    100%{
+        right: 900px;
+    }
+}
+.hero h1{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 70px;
+    margin-left: 500px;
+    color: #fff;
+}
+.hero .scroll-button {
+    position: absolute;
+    right: 670px;
+    top: 600px;
+    background-color: #000; 
+    color: white;
+    padding: 15px 65px;
+    font-size: 20px;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+  }
+  
+  .scroll-button:hover{
+    background-color: crimson; /*Darker Green*/
+  } 
+  .hero .asteroid .stone{
+    position: absolute;
+    width: 10px;
+    height: 140px;
+    background: linear-gradient(to top, #384284, transparent);
+    top: 100px;
+    left: 100px;
+    border-radius: 50px;
+    opacity: 0;
+    animation: stone 7s ease 0s infinite;
+  }
+  @keyframes stone{
+    from{
+        transform: translateY(-500%);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(500%);
+        opacity: .3;
+    }
+  }
+  .hero .asteroid .stone:nth-child(2){
+    top: 300px;
+    left: 400px;   
+    animation-delay: .7s;
+    animation-duration: 6s;
+  }
+  .hero .asteroid .stone:nth-child(3){
+    top: 500px;
+    left: 200px; 
+    animation-delay: .5s;
+    animation-duration: 3s;  
+  }
+  .hero .asteroid .stone:nth-child(4){
+    top: 100px;
+    right: 100px;   
+    left: inherit;
+    animation-delay: .2s;
+    animation-duration: 4s;
+  }
+  .hero .asteroid .stone:nth-child(5){
+    top: 300px;
+    right: 400px;   
+    left: inherit;  
+    animation-delay: .8s;
+    animation-duration: 7s;
+  }
+  .hero .asteroid .stone:nth-child(6){
+    top: 500px;
+    right: 200px;   
+    left: inherit;
+  }
+  .hero .asteroid .stone:nth-child(7){
+    top: 0;   
+    left: 45%;
+  }
+  .hero .asteroid .stone:nth-child(even){
+    background: linear-gradient(to top, #384fde, transparent);
+    box-shadow: 0 4px 94px #384fde;
+  }
+  
