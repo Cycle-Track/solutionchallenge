@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    
+    background: url(/images/background6.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .forget-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .forget-password-inner {
+    width: 450px;
+    padding: 40px;
+    height: 48vh;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #CCCCCC;
+    animation: slide-up 0.5s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: crimson;
+    margin-bottom: 20px;
+    background: #CCCCCC;
+  }
+  
+  button[type="submit"] {
+    background-color: crimson;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: crimson;
+  }
+  
+  button[type="submit"]:focus {
+    outline: none;
+  }
+  a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
