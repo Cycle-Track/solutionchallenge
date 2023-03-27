@@ -67,7 +67,7 @@ body{
 .bicycle-container{
     position: absolute;
     margin: auto;
-    top: 100;
+    top: 80px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -481,4 +481,3 @@ body{
     background: linear-gradient(to top, #384fde, transparent);
     box-shadow: 0 4px 94px #384fde;
   }
-  
