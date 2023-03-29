@@ -1,0 +1,3 @@
+steps:
+      - name: gcr.io/fluted-depth-380901/firebase
+        args: ['deploy', '--project=fluted-depth-380901', '--only=hosting']
