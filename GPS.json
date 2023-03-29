@@ -1,0 +1,32 @@
+[ 
+    { 
+        "id": 0, 
+        "timestamp": 1647340800, 
+        "latitude": "51.5074° N", 
+        "longitude": "0.1278° W", 
+        "altitude": 10, 
+        "accuracy": 5, 
+        "sender": "0x1234567890123456789012345678901234567890" 
+        }, 
+
+    { 
+        "id": 1, 
+        "timestamp": 1647340810, 
+        "latitude": "40.7128° N", 
+        "longitude": "74.0060° W",
+        "altitude": 15, 
+        "accuracy": 10, 
+        "sender": "0x1234567890123456789012345678901234567890" 
+    }, 
+
+
+    { 
+        "id": 2, 
+        "timestamp": 1647340820, 
+        "latitude": "34.0522° N", 
+        "longitude": "118.2437° W", 
+        "altitude": 20, 
+        "accuracy": 7, 
+        "sender": "0x0987654321098765432109876543210987654321"
+    }
+]
